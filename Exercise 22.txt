@@ -1,0 +1,31 @@
+#1.Write a Program to copy a text file to another file
+
+
+f1=open("File1.txt",'r')
+
+f2=open("File2.txt",'w')
+for line in f1:
+    f2.write(line)
+
+
+
+
+#2.Write a program to count the number of lines in a file
+fc=open("Tocountlines.txt",'r')
+count=0
+content=fc.read()
+conlist=content.split("\n")
+for i in conlist:
+    if i:
+        count=count+1
+print("Number of Lines in Text are:",count)
+
+
+
+
+#3.Write a Program to append a file with contents of another file
+
+fa1=open("F1contents.txt",'r')
+fa2=open("F2contents.txt",'a')
+for line in fa1:
+    fa2.write(line)
